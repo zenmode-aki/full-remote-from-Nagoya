@@ -360,6 +360,33 @@ body[data-theme="dark"] .details-content strong {
   color: var(--heading-dark) !important;
 }
 
+/* Nested collapsible sections styling */
+.details-content .collapsible-section {
+  margin: 1rem 0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+body[data-theme="light"] .details-content .collapsible-section {
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+body[data-theme="dark"] .details-content .collapsible-section {
+  border: 1px solid #4b5563;
+  background-color: #1f2937;
+}
+
+.details-content .collapsible-section summary {
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.details-content .collapsible-section .details-content {
+  padding: 0 1rem 1rem 1rem;
+}
+
 /* --- FOOTER --- */
 footer {
   text-align: center;
