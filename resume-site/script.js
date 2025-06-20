@@ -225,7 +225,64 @@ function setupAccordionBehavior() {
 
         // Open the clicked one
         accordion.open = true;
+        
+        // Auto-highlight specific text when Education section is opened
+        if (accordion.querySelector('summary').textContent.trim() === 'Education') {
+          setTimeout(() => {
+            autoHighlightText(accordion, 'Withdrew after six months.', '#ffd700');
+          }, 300); // Small delay to ensure the accordion is fully opened
+        }
       }
     });
   });
+}
+
+function autoHighlightText(container, targetText, highlightColor) {
+  // Find all text nodes within the container
+  const walker = document.createTreeWalker(
+    container,
+    NodeFilter.SHOW_TEXT,
+    null,
+    false
+  );
+
+  let node;
+  while (node = walker.nextNode()) {
+    const text = node.textContent;
+    const index = text.indexOf(targetText);
+    
+    if (index !== -1) {
+      // Create a range for the target text
+      const range = document.createRange();
+      range.setStart(node, index);
+      range.setEnd(node, index + targetText.length);
+      
+      // Create a span element with highlight
+      const span = document.createElement('span');
+      span.style.backgroundColor = highlightColor;
+      span.style.padding = '2px 4px';
+      span.style.borderRadius = '3px';
+      span.style.transition = 'all 0.3s ease';
+      
+      // Replace the text with highlighted version
+      try {
+        range.surroundContents(span);
+      } catch (e) {
+        // If surroundContents fails, use extractContents and appendChild
+        const contents = range.extractContents();
+        span.appendChild(contents);
+        range.insertNode(span);
+      }
+      
+      // Add a subtle animation
+      setTimeout(() => {
+        span.style.transform = 'scale(1.05)';
+        setTimeout(() => {
+          span.style.transform = 'scale(1)';
+        }, 200);
+      }, 100);
+      
+      break; // Only highlight the first occurrence
+    }
+  }
 } 
