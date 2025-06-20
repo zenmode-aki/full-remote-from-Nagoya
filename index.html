@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aki Ezaki - Self Introduction</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Editing Toolbar -->
+  <div id="editing-toolbar" class="editing-toolbar">
+    <button id="bold-btn" title="Bold"><i class="fas fa-bold"></i></button>
+    <button id="italic-btn" title="Italic"><i class="fas fa-italic"></i></button>
+    <button id="underline-btn" title="Underline"><i class="fas fa-underline"></i></button>
+    <button id="highlight-btn" title="Highlight"><i class="fas fa-highlighter"></i></button>
+    <div class="color-picker-group">
+      <label for="text-color">Text:</label>
+      <input type="color" id="text-color" value="#ffffff">
+      <label for="bg-color">Highlight:</label>
+      <input type="color" id="bg-color" value="#ffd700">
+    </div>
+    <button id="save-btn" title="Save Changes"><i class="fas fa-save"></i></button>
+    <button id="edit-mode-btn" title="Toggle Edit Mode"><i class="fas fa-edit"></i></button>
+  </div>
+
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle-container">
+    <button id="theme-toggle-btn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">
+      <i class="fas fa-moon"></i>
+      <span class="theme-label">Dark Mode</span>
+    </button>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>Aki Ezaki's Profile</h1>
+      <div class="edit-indicator">
+        <span id="edit-status">Click "Edit Mode" to modify text</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="profile-intro">
+        <div class="profile-container">
+          <div class="profile-image-section">
+            <div class="image-carousel">
+              <div class="carousel-container">
+                <img src="gallery-5.jpg" alt="Aki Ezaki" class="profile-image">
+              </div>
+            </div>
+          </div>
+          <div class="profile-text">
+            <h2 class="editable">Self-Introduction</h2>
+            <p class="editable"><strong>Name:</strong> Aki Ezaki</p>
+            <p class="editable"><strong>Date of Birth:</strong> July 26, 2004</p>
+            <p class="editable"><strong>Place of Birth:</strong> Nagoya City, Aichi Prefecture, Japan</p>
+            <p class="editable"><strong>Languages:</strong> Japanese (native), English (business level)</p>
+            <p class="editable"><strong>Skills & Certifications:</strong> AWS Certified Cloud Practitioner</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personal Information Section -->
+      <section class="section-group">
+        <h2 class="section-group-title">Personal Information</h2>
+        <div class="horizontal-sections">
+          <details class="collapsible-section horizontal-item">
+            <summary>Education</summary>
+            <div class="details-content">
+              <p class="editable"><strong>April 2023:</strong> Enrolled in the University of Aizu, a public university in Fukushima Prefecture known for its focus on computer science and engineering. Withdrew after six months.</p>
+              <p class="editable"><strong>Reason for withdrawal: ChatGPT and student loans.</strong></p>
+              <p class="editable">Around the same time I started university, ChatGPT-4 was released. It was truly shocking. When I weighed "the evolution of AI over the next four years" against "what I would learn at university," I deeply questioned whether it was worth continuing my studies while carrying a student loan.</p>
+              <p class="editable">After much deliberation, I made the decision on my own to leave the university after just half a year.</p>
+              <p class="editable"><strong>October 2024 – Present:</strong> Currently studying as a first-year student at <strong>Jiyugaoka SANNO University</strong>, a well-regarded distance learning institution in Japan.</p>
+              <p class="editable">I decided to return to university after gaining some financial stability, feeling confident I could complete my degree without needing student loans.</p>
+              <p class="editable">While academic achievement isn't my main focus, I believe that <strong>having a degree can help open up more opportunities in the future</strong>.</p>
+              <p class="editable">At the same time, I'm also focused on building practical skills through work and self-study.</p>
+              <p class="editable">The university's flexible curriculum allows students to concentrate their studies on weekends, so <strong>my full-time job remains completely unaffected</strong>.</p>
+              <p class="editable">I'm continuing my studies at a steady, manageable pace.</p>
+            </div>
+          </details>
+
+          <details class="collapsible-section horizontal-item" open>
+            <summary>Work Experience</summary>
+            <div class="details-content">
+              <p class="editable"><strong>While I was living in Japan (until 2023, I was 18 or 19):</strong></p>
+              <p class="editable">Worked part-time in the food service industry and at a call center.</p>
+              
+              <p class="editable"><strong>April 2024 – January 2025:</strong></p>
+              <p class="editable">I worked as an intern Japanese manager at Clark Talk Academy, a language school in the Clark Freeport Zone, Philippines.</p>
+              
+              <details class="collapsible-section">
+                <summary>Japanese manager</summary>
+                <div class="details-content">
+                  <p class="editable">I did many kinds of tasks, like working with study abroad agents, making marketing plans, and posting on social media.</p>
+                  <p class="editable">As the <strong>first Japanese manager at the school</strong>, I contributed to increasing its visibility in the Japanese study abroad market.</p>
+                </div>
+              </details>
+              
+              <p class="editable"><strong>January 2025 – Present:</strong></p>
+              <p class="editable">Working as a <strong>Bridge System Engineer (BSE)</strong> at a Japanese IT development company based in Cebu, Philippines.</p>
+              
+              <details class="collapsible-section">
+                <summary>Bridge System Engineer (BSE)</summary>
+                <div class="details-content">
+                  <p class="editable">My current job is to <strong>help Japanese clients and Filipino engineers understand each other</strong>.</p>
+                  <p class="editable">I support the project by helping with <strong>planning, communication, and checking the quality of the work</strong>.</p>
+                  <p class="editable"><strong>Here are some of my main tasks:</strong></p>
+                  <ul>
+                    <li class="editable">Managing the engineers' daily tasks</li>
+                    <li class="editable">Helping in meetings as an interpreter and answering questions</li>
+                    <li class="editable">Translating and organizing documents like specs and requirements</li>
+                    <li class="editable">Checking the project status and solving any problems early</li>
+                  </ul>
+                  <p class="editable">As a BSE, I don't write code, but I need to understand <strong>basic IT topics</strong> and have a <strong>big-picture view</strong> of the project.</p>
+                  <p class="editable">I'm involved in different kinds of projects like <strong>Windows apps</strong>, <strong>API connections</strong>, and <strong>AI-related tools</strong>.</p>
+                  <p class="editable">I usually work on <strong>several projects at the same time</strong>, so I need to learn quickly and communicate clearly.</p>
+                  <p class="editable">Every day, I use both <strong>IT knowledge</strong> and <strong>language skills</strong> to connect the team and keep the project moving forward.</p>
+                </div>
+              </details>
+            </div>
+          </details>
+          
+          <details class="collapsible-section horizontal-item">
+            <summary>What I Still Want to Improve</summary>
+            <div class="details-content">
+              <p class="editable">There are some things I'm still working on and want to get better at:</p>
+              
+              <details class="collapsible-section">
+                <summary>①Reading and writing programming code, and working in cloud environments</summary>
+                <div class="details-content">
+                  <p class="editable">Right now, I can handle basic tasks with the help of AI tools. But I want to improve my skills so I can do more by myself without support.</p>
+                </div>
+              </details>
+              
+              <details class="collapsible-section">
+                <summary>②Speaking English fluently for more than three minutes</summary>
+                <div class="details-content">
+                  <p class="editable">I can read, write, and chat in English with no problem. But I want to speak more smoothly and confidently, especially in longer conversations.</p>
+                </div>
+              </details>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- For Potential Employers Section -->
+      <section class="section-group">
+        <h2 class="section-group-title">For Potential Employers</h2>
+        
+        <details class="collapsible-section">
+          <summary>Job Preferences</summary>
+          <div class="details-content">
+              <p class="editable">This may sound a little bold, but in order to bring out my full potential, I'd like to share my preferences if I have the opportunity to change jobs:</p>
+              <ol>
+                <li class="editable"><strong>My top priority is to work fully remotely from Japan.</strong></li>
+                <li class="editable"><strong>I also hope to work at a company that actively embraces AI tools and technologies.</strong></li>
+              </ol>
+              <p class="editable">I believe these conditions will help me do my best and keep growing.</p>
+          </div>
+        </details>
+
+      <details class="collapsible-section">
+        <summary>Preferred Role & Working Style</summary>
+        <div class="details-content">
+          <ul>
+            <li>I'm looking for an <strong>engineer position</strong>, either frontend or backend.</li>
+            <li>I want to work in a team where people actively use AI tools.</li>
+            <li>I'm happy to start as an <strong>intern for the first 3 to 6 months</strong>.</li>
+            <li><strong>Working fully remotely from Japan is a must</strong> — this is my most important condition.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="collapsible-section">
+        <summary>Why Full-Remote Work Is a Must for Me</summary>
+        <div class="details-content">
+          <p>I can do my best work in a quiet and calm environment, which allows me to give the most to my team.</p>
+          <h4>My Personality and Traits</h4>
+          <p>I am an introvert with HSP traits, making me sensitive to noise and movement. Busy offices are draining and prevent me from using my full potential. In a quiet space, I can focus, learn effectively, and achieve good results, like when I studied for my AWS certification.</p>
+          <h4>Staying in a good mood helps me do my best work</h4>
+          <p>A calm state of mind provides the energy for sustained effort, which brings value to the team. A quiet environment helps me stay mentally balanced and focused.</p>
+           <h4>Where I want to work remotely</h4>
+          <p>I plan to live alone in my hometown of Nagoya. I concentrate better when I have my own quiet space, separate from my parents. This lifestyle, balanced with occasional social time, is ideal for long-term high performance.</p>
+           <h4>It's not that I'm bad at building relationships</h4>
+          <p>I enjoy teamwork but my sensitive nature means I can get tired even in a good office environment. Choosing a quiet setting is a conscious decision based on self-awareness to maximize my contribution.</p>
+          <h4>My Experience Working Remotely with Others</h4>
+          <p>As a Bridge SE, I already work closely with full-remote Filipino engineers. We use calls and screen sharing to maintain clear communication and have built strong trust and steady output. This experience convinces me that full-remote work is where I can best apply my strengths.</p>
+        </div>
+      </details>
+      
+      <details class="collapsible-section">
+        <summary>Why I Want to Build My Career as an Engineer</summary>
+        <div class="details-content">
+          <p>I want to create things that bring joy and inspiration to others. I feel a growing desire to move from managing engineers to being a developer who creates value through code. Learning, especially about new technologies like AI, is my greatest source of entertainment. Seeing clients thank our engineers inspires me to one day be the one who builds the solutions that help people.</p>
+        </div>
+      </details>
+
+      <details class="collapsible-section">
+        <summary>My Thoughts on Employment Style</summary>
+        <div class="details-content">
+          <p>I prefer to start with a paid internship (3-6 months) to ensure a good fit for both myself and the company. This allows me to gain experience and adapt to the team without the pressure of a full-time role from day one. I am committed to contributing beyond expectations and would be grateful for consideration for a full-time position if we build mutual trust.</p>
+        </div>
+      </details>
+
+      <details class="collapsible-section">
+        <summary>Ideal Company Culture</summary>
+        <div class="details-content">
+          <p><strong>I am a good fit for companies that quickly adopt and actively use new technologies and services.</strong></p>
+          <ul>
+            <li>A culture that actively uses AI tools (e.g., Google AI Studio, Cursor, ClaudeCode, MCP server).</li>
+            <li>A company that officially promotes and encourages AI usage, ideally with financial support for tools.</li>
+          </ul>
+          <p>Conversely, I may not be a good fit for companies that do not place much importance on adopting new technologies.</p>
+        </div>
+      </details>
+      
+              <details class="collapsible-section">
+          <summary>When I Can Start Working</summary>
+          <div class="details-content">
+            <p class="editable">I plan to start approximately <strong>three months after a final offer</strong>. I am committed to a smooth transition out of my current role, including preparing thorough handover documents. It is important to me to act with integrity and not leave my current team in a difficult position. I would also use this time to study and prepare for the new role.</p>
+          </div>
+        </details>
+        
+      </section>
+
+      </main>
+
+    <footer>
+      <p>&copy; 2024 Aki Ezaki</p>
+    </footer>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> 
