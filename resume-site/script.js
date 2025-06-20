@@ -229,8 +229,8 @@ function setupAccordionBehavior() {
         // Auto-highlight specific text when Education section is opened
         if (accordion.querySelector('summary').textContent.trim() === 'Education') {
           setTimeout(() => {
-            autoHighlightText(accordion, 'Withdrew after six months.', '#ffd700');
-          }, 300); // Small delay to ensure the accordion is fully opened
+            autoHighlightText(accordion, 'Withdrew after six months.', 'rgba(255, 215, 0, 0.3)');
+          }, 500); // Increased delay for smoother user experience
         }
       }
     });
@@ -257,12 +257,14 @@ function autoHighlightText(container, targetText, highlightColor) {
       range.setStart(node, index);
       range.setEnd(node, index + targetText.length);
       
-      // Create a span element with highlight
+      // Create a span element with subtle highlight
       const span = document.createElement('span');
-      span.style.backgroundColor = highlightColor;
-      span.style.padding = '2px 4px';
-      span.style.borderRadius = '3px';
-      span.style.transition = 'all 0.3s ease';
+      span.style.backgroundColor = 'transparent';
+      span.style.padding = '3px 6px';
+      span.style.borderRadius = '6px';
+      span.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+      span.style.position = 'relative';
+      span.style.fontWeight = '500';
       
       // Replace the text with highlighted version
       try {
@@ -274,13 +276,36 @@ function autoHighlightText(container, targetText, highlightColor) {
         range.insertNode(span);
       }
       
-      // Add a subtle animation
+      // Gradual highlight animation that responds to user interaction
       setTimeout(() => {
-        span.style.transform = 'scale(1.05)';
+        // First phase: subtle glow
+        span.style.backgroundColor = highlightColor;
+        span.style.boxShadow = `0 0 8px ${highlightColor}`;
+        
         setTimeout(() => {
-          span.style.transform = 'scale(1)';
-        }, 200);
-      }, 100);
+          // Second phase: gentle pulse
+          span.style.transform = 'scale(1.02)';
+          span.style.backgroundColor = highlightColor;
+          
+          setTimeout(() => {
+            // Final phase: settle into comfortable highlight
+            span.style.transform = 'scale(1)';
+            span.style.boxShadow = `0 0 4px ${highlightColor}`;
+            
+            // Add hover interaction
+            span.addEventListener('mouseenter', () => {
+              span.style.backgroundColor = 'rgba(255, 215, 0, 0.5)';
+              span.style.transform = 'scale(1.01)';
+            });
+            
+            span.addEventListener('mouseleave', () => {
+              span.style.backgroundColor = highlightColor;
+              span.style.transform = 'scale(1)';
+            });
+            
+          }, 400);
+        }, 300);
+      }, 200);
       
       break; // Only highlight the first occurrence
     }
