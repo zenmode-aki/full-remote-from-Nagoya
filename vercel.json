@@ -1,16 +1,13 @@
 {
+  "functions": {
+    "resume-site/index.html": {
+      "includeFiles": "**"
+    }
+  },
   "rewrites": [
     {
       "source": "/",
       "destination": "/resume-site/index.html"
-    },
-    {
-      "source": "/style.css",
-      "destination": "/resume-site/style.css"
-    },
-    {
-      "source": "/script.js",
-      "destination": "/resume-site/script.js"
     }
   ],
   "headers": [
