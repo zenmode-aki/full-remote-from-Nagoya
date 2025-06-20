@@ -3,15 +3,32 @@
     {
       "source": "/",
       "destination": "/resume-site/index.html"
+    },
+    {
+      "source": "/style.css",
+      "destination": "/resume-site/style.css"
+    },
+    {
+      "source": "/script.js",
+      "destination": "/resume-site/script.js"
     }
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/(.*\\.(jpg|jpeg|png|gif|webp))",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.(css|js))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
         }
       ]
     }
